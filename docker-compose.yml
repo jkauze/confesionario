@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:4.4.0-rc7-bionic
+    container_name: db_confesionario_cont
+    command: --serviceExecutor adaptive
+    volumes:
+      - ./mongodb_data_container:/data/db
+    ports:
+        - "27017:27017"
+  # app:
+  #   build: .
+  #   image: app_confesionario_im
+  #   container_name: app_confesionario_cont
+  #       depends_on:
+  #           - mongodb
+  #       ports:
+  #           - "3000:3000"
+  #       volumes:
+  #           - .:/app
+  #           - /app/node_modules
+  #       command: ./wait-for-it.sh postgresdb:5432 -- npm run dev
