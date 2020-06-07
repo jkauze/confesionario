@@ -7,7 +7,7 @@ Versiones:
 Docker app image: NodeJs 12.18.0 - Npm 6.14.4
 
 Docker db image: mongo:4.4.0-rc7-bionic
----------
+
 
 Requisitos para ejecutar:
 ---------
