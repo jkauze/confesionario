@@ -8,15 +8,18 @@ services:
       - ./mongodb_data_container:/data/db
     ports:
         - "27017:27017"
-  # app:
-  #   build: .
-  #   image: app_confesionario_im
-  #   container_name: app_confesionario_cont
-  #       depends_on:
-  #           - mongodb
-  #       ports:
-  #           - "3000:3000"
-  #       volumes:
-  #           - .:/app
-  #           - /app/node_modules
-  #       command: ./wait-for-it.sh postgresdb:5432 -- npm run dev
+    expose:
+      - "27017"
+  app:
+    build: .
+    image: app_confesionario_im
+    container_name: app_confesionario_cont
+    restart: always
+    depends_on:
+        - mongodb
+    volumes:
+        - .:/app
+        - /app/node_modules
+    ports:
+        - "3000:3000"
+    command: ./wait-for-it.sh mongodb:27017 -- pm2-runtime src/index.js
