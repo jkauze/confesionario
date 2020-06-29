@@ -18,7 +18,7 @@ const postMessage = async (req, res) => {
         }
         // newMessage = await Message.create({ text: message })
         // getSocket().emit('New message', newMessage);
-        res.redirect('/')
+        // res.redirect('/')
     } catch (error) {
         console.log(error)
     }

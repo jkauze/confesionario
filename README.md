@@ -42,10 +42,10 @@ Teconologias usadas:
 Por hacer:
 ---------
 
-- Aplicar validaciones con @hapi/joi
-- Pagination sobre la lista de mensajes
-- Probar la implementacion de elasticsearch (actualmente solamente es un get del crud)
-- Se podria mejorar la comunicacion de socketIo para que al enviar no sea un redirect, sino simule un chat
+- [ ] Aplicar validaciones con @hapi/joi
+- [ ] Pagination sobre la lista de mensajes
+- [ ] Probar la implementacion de elasticsearch (actualmente solamente es un get del crud)
+- [x] Se podria mejorar la comunicacion de socketIo para que al enviar no sea un redirect, sino simule un chat
 
 *Cualquier cosa creen un issue - JK*
 

@@ -1,9 +1,13 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://mongodb:27017/confesionario', {
+const host = process.env.MONGO_HOST;
+const port = process.env.MONGO_PORT;
+
+mongoose.connect(`mongodb://${host}:${port}/confesionario`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 
 })
-.then(db => console.log("DB connected at 27017"))
+.then(db => console.log(`DB connected at ${port}`))
 .catch(err => console.log(err))

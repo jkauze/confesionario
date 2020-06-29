@@ -28,8 +28,11 @@ function notifyMe(message = 'Hi there') {
 let btn = document.getElementById('send')
 let texto = document.getElementById('text-field')
 
-btn.addEventListener('click', function() {
-    socket.emit('New message', texto.value)
+btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    socket.emit('New message', texto.value);
+    texto.value = ''
+    texto.autofocus
 })
 
 socket.on('New message', data => {
