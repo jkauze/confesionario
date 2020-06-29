@@ -19,6 +19,7 @@ Instrucciones:
 ---------
 
 - Clonar el repo
+- Definir el archivo .env con los siguientes parametros MONGO_HOST, MONGO_PORT
 - Levantar el proyecto con docker-compose:
 
 ```
