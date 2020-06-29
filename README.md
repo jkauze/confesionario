@@ -7,7 +7,7 @@ Versiones:
 Docker app image: NodeJs 12.18.0 - Npm 6.14.4
 
 Docker db image: mongo:4.4.0-rc7-bionic
----------
+
 
 Requisitos para ejecutar:
 ---------
@@ -46,6 +46,7 @@ Por hacer:
 - [ ] Pagination sobre la lista de mensajes
 - [ ] Probar la implementacion de elasticsearch (actualmente solamente es un get del crud)
 - [x] Se podria mejorar la comunicacion de socketIo para que al enviar no sea un redirect, sino simule un chat
+- [ ] Permitir connectiones tcp para el uso de la app mediante terminal con el comando nc (seria directamente sobre la BD)
 
 *Cualquier cosa creen un issue - JK*
 
